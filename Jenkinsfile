@@ -1,4 +1,4 @@
-pipeline{
+pipeline {
 	agent any
 
 		stage('saving nginx image on staging server') {
