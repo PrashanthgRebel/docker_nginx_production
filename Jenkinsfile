@@ -14,7 +14,7 @@ pipeline {
 			stage('getting image from staging to production'){
 				steps{
 					sh '''SSH_ARGS="-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
-				    sshpass -p \'9246\' ssh ${SSH_ARGS}  prashanth@172.29.87.227 "sudo scp -q /home/prashanth/nginxprod.tar prashanth@172.29.87.69:/home/prashanth/ "'''
+				    sshpass -p \'9246\' ssh ${SSH_ARGS}  prashanth@172.29.87.227 "scp -q /home/prashanth/nginxprod.tar prashanth@172.29.87.69:/home/prashanth/ "'''
 
 				}
 				
